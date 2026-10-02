@@ -1,0 +1,23 @@
+# ---------------------------------------------------------------------------
+# Government Scheme Assistant - backend dependencies
+# Install with:  pip install -r requirements.txt
+# (numpy is pinned to <2 because sentence-transformers 3.3.x is not yet
+#  compatible with numpy 2.x)
+# ---------------------------------------------------------------------------
+
+# --- Web framework ---------------------------------------------------------
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+pydantic==2.9.2
+python-dotenv==1.0.1
+httpx==0.28.1
+
+# --- Agentic AI / LLM orchestration -----------------------------------------
+langgraph==0.2.53
+langchain-core==0.3.63
+
+# --- RAG (optional but recommended) ----------------------------------------
+# sentence-transformers pulls in torch; set EMBEDDING_ENABLED=false in .env to
+# skip the download and run on BM25 only.
+sentence-transformers==3.3.1
+numpy<2
