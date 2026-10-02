@@ -18,27 +18,7 @@ It combines three things that are usually shown separately in tutorials:
 
 ---
 
-## Table of contents
 
-1. [Problem statement](#problem-statement)
-2. [Objectives](#objectives)
-3. [Features](#features)
-4. [System architecture](#system-architecture)
-5. [Technologies used](#technologies-used)
-6. [RAG implementation](#rag-implementation)
-7. [Agentic AI / LangGraph implementation](#agentic-ai--langgraph-implementation)
-8. [Anti-hallucination design](#anti-hallucination-design)
-9. [Project structure](#project-structure)
-10. [API endpoints](#api-endpoints)
-11. [Installation](#installation)
-12. [Running the application](#running-the-application)
-13. [Environment variables](#environment-variables)
-14. [Example user queries](#example-user-queries)
-15. [Testing](#testing)
-16. [How to explain this in an interview](#how-to-explain-this-in-an-interview)
-17. [Future enhancements](#future-enhancements)
-
----
 
 ## Problem statement
 
