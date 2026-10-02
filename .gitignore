@@ -62,3 +62,4 @@ desktop.ini
 # ---------------------------------------------------------------------------
 !.env.example
 !knowledge_base/schemes.jsonl
+.env
