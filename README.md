@@ -587,28 +587,7 @@ python -m utils.eligibility     # prints two eligibility check results
 python -m utils.grounding       # exercises the fact checker
 ```
 
-## How to explain this in an interview
 
-Short version, in this order:
-
-1. **"What is it?"** - a scholarship discovery assistant; a user describes
-   themselves, the app tells them which government schemes they can apply for.
-2. **"Why is an LLM enough / not enough?"** - it is not. Eligibility must be
-   exact, so I built a deterministic rule engine and made the LLM a *writer*, not
-   a decision maker. That split is the core design decision of the project.
-3. **"How do you stop hallucinations?"** - three layers: strict prompt with
-   retrieved fact blocks only, no LLM access to eligibility verdicts, and a
-   post-generation check that removes unknown links and flags unknown amounts and
-   dates. I have a demo where a mock LLM invents a ₹5,00,000 scholarship and the
-   guard-rail catches it.
-4. **"What is RAG here?"** - 15 scheme records → 4 chunks each → 60 chunks,
-   hybrid BM25 + embedding search, top-k per scheme, then the chunks become the
-   only facts the model sees.
-5. **"What is the agentic part?"** - five LangGraph nodes with one shared state
-   object; the state is printed in the UI, so the reasoning is inspectable.
-6. **"What if the API is down or the key is missing?"** - provider fallback to a
-   deterministic retrieval-only writer, so the demo never shows a 500.
-7. **"What would you do next?"** - see future enhancements.
 
 ## Future enhancements
 
